@@ -3,14 +3,206 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>مكتبة جنى</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffaf7;
+      color: #3d3040;
+    }
+
+    header {
+      background: #f4c6d7;
+      padding: 22px 18px;
+      text-align: center;
+      border-bottom: 3px solid #d9b36c;
+    }
+
+    .logo {
+      font-size: 34px;
+      font-weight: bold;
+      color: #70445f;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      font-size: 16px;
+      color: #5d4658;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      padding: 15px;
+      background: #fffaf7;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #70445f;
+      background: white;
+      border: 1px solid #e8c6d5;
+      padding: 9px 15px;
+      border-radius: 25px;
+      font-size: 14px;
+    }
+
+    .hero {
+      margin: 20px;
+      padding: 35px 20px;
+      text-align: center;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #f8d9e5, #f7eee9);
+    }
+
+    .hero h1 {
+      font-size: 29px;
+      color: #70445f;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      background: #70445f;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+    }
+
+    .section {
+      padding: 25px 18px;
+    }
+
+    .section h2 {
+      text-align: center;
+      color: #70445f;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .category {
+      background: white;
+      border: 1px solid #ecd8df;
+      padding: 25px 10px;
+      text-align: center;
+      border-radius: 18px;
+      box-shadow: 0 3px 12px rgba(112, 68, 95, 0.08);
+    }
+
+    .category .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .category h3 {
+      color: #70445f;
+      font-size: 17px;
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 25px;
+      text-align: center;
+      background: #70445f;
+      color: white;
+    }
+
+    footer strong {
+      color: #f4c6d7;
+    }
+  </style>
 </head>
 
 <body>
 
-  <h1>مكتبة جنى</h1>
+  <header>
+    <div class="logo">جنى</div>
+    <div class="subtitle">مكتبة جنى للقرطاسية والهدايا 📚</div>
+  </header>
 
-  <p>كل ما تحتاجه للمدرسة… بمكان واحد 📚</p>
+  <nav>
+    <a href="#">الرئيسية</a>
+    <a href="#categories">الأقسام</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <section class="hero">
+    <h1>كل شي بتحتاجه بمكان واحد ✨</h1>
+    <p>
+      قرطاسية، شنط مدرسية، أدوات مدرسية وهدايا
+      بتشكيلة حلوة تناسب الكبار والصغار.
+    </p>
+
+    <a href="#categories" class="button">تصفّح الأقسام</a>
+  </section>
+
+  <section class="section" id="categories">
+
+    <h2>تصفّح حسب القسم</h2>
+
+    <div class="categories">
+
+      <div class="category">
+        <div class="icon">🎒</div>
+        <h3>شنط مدرسية</h3>
+      </div>
+
+      <div class="category">
+        <div class="icon">✏️</div>
+        <h3>قرطاسية</h3>
+      </div>
+
+      <div class="category">
+        <div class="icon">🎨</div>
+        <h3>فن وإبداع</h3>
+      </div>
+
+      <div class="category">
+        <div class="icon">🎁</div>
+        <h3>هدايا</h3>
+      </div>
+
+      <div class="category">
+        <div class="icon">🍱</div>
+        <h3>لانش بوكس ومطريات</h3>
+      </div>
+
+      <div class="category">
+        <div class="icon">🏫</div>
+        <h3>مستلزمات المدرسة</h3>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer id="contact">
+    <p>مكتبة <strong>جنى</strong></p>
+    <p>كل شي بتحبه... أقرب مما بتتخيل 💗</p>
+  </footer>
 
 </body>
 </html>
