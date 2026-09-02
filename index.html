@@ -1,208 +1,250 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مكتبة جنى</title>
 
-  <title>مكتبة جنى</title>
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+body{
+  font-family:Arial, sans-serif;
+  background:#fffaf7;
+  color:#4d3544;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #fffaf7;
-      color: #3d3040;
-    }
+header{
+  background:#f4c6d7;
+  padding:18px 20px;
+  text-align:center;
+  border-bottom:3px solid #d9b36c;
+}
 
-    header {
-      background: #f4c6d7;
-      padding: 22px 18px;
-      text-align: center;
-      border-bottom: 3px solid #d9b36c;
-    }
+.logo{
+  font-size:38px;
+  font-weight:bold;
+  color:#70445f;
+}
 
-    .logo {
-      font-size: 34px;
-      font-weight: bold;
-      color: #70445f;
-    }
+header p{
+  margin-top:6px;
+  font-size:15px;
+}
 
-    .subtitle {
-      margin-top: 8px;
-      font-size: 16px;
-      color: #5d4658;
-    }
+nav{
+  background:#fff;
+  padding:12px;
+  text-align:center;
+  box-shadow:0 2px 8px #00000010;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      padding: 15px;
-      background: #fffaf7;
-    }
+nav a{
+  color:#70445f;
+  text-decoration:none;
+  margin:0 10px;
+  font-weight:bold;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #70445f;
-      background: white;
-      border: 1px solid #e8c6d5;
-      padding: 9px 15px;
-      border-radius: 25px;
-      font-size: 14px;
-    }
+.hero{
+  padding:55px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#fffaf7,#f8dce7);
+}
 
-    .hero {
-      margin: 20px;
-      padding: 35px 20px;
-      text-align: center;
-      border-radius: 25px;
-      background: linear-gradient(135deg, #f8d9e5, #f7eee9);
-    }
+.hero h1{
+  font-size:34px;
+  color:#70445f;
+  margin-bottom:15px;
+}
 
-    .hero h1 {
-      font-size: 29px;
-      color: #70445f;
-      margin-bottom: 12px;
-    }
+.hero p{
+  font-size:18px;
+  line-height:1.8;
+  max-width:650px;
+  margin:auto;
+}
 
-    .hero p {
-      font-size: 17px;
-      line-height: 1.7;
-    }
+.button{
+  display:inline-block;
+  margin-top:25px;
+  padding:13px 25px;
+  background:#70445f;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 20px;
-      background: #70445f;
-      color: white;
-      text-decoration: none;
-      padding: 12px 25px;
-      border-radius: 25px;
-    }
+section{
+  padding:40px 20px;
+  max-width:1100px;
+  margin:auto;
+}
 
-    .section {
-      padding: 25px 18px;
-    }
+.section-title{
+  text-align:center;
+  color:#70445f;
+  font-size:27px;
+  margin-bottom:25px;
+}
 
-    .section h2 {
-      text-align: center;
-      color: #70445f;
-      margin-bottom: 20px;
-      font-size: 24px;
-    }
+.categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:15px;
+}
 
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-    }
+.card{
+  background:white;
+  border:2px solid #e8d3b1;
+  border-radius:18px;
+  padding:25px 15px;
+  text-align:center;
+  box-shadow:0 4px 12px #0000000d;
+}
 
-    .category {
-      background: white;
-      border: 1px solid #ecd8df;
-      padding: 25px 10px;
-      text-align: center;
-      border-radius: 18px;
-      box-shadow: 0 3px 12px rgba(112, 68, 95, 0.08);
-    }
+.card .icon{
+  font-size:40px;
+  margin-bottom:10px;
+}
 
-    .category .icon {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
+.card h3{
+  color:#70445f;
+  font-size:18px;
+}
 
-    .category h3 {
-      color: #70445f;
-      font-size: 17px;
-    }
+.about{
+  background:#f8e6ed;
+  text-align:center;
+  border-radius:25px;
+  padding:35px 20px;
+  line-height:2;
+}
 
-    footer {
-      margin-top: 20px;
-      padding: 25px;
-      text-align: center;
-      background: #70445f;
-      color: white;
-    }
+footer{
+  margin-top:30px;
+  background:#70445f;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+}
 
-    footer strong {
-      color: #f4c6d7;
-    }
-  </style>
+footer strong{
+  color:#f4c6d7;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">جنى</div>
-    <div class="subtitle">مكتبة جنى للقرطاسية والهدايا 📚</div>
-  </header>
+<header>
+  <div class="logo">جنى</div>
+  <p>مكتبة جنى للقرطاسية والهدايا 📚</p>
+</header>
 
-  <nav>
-    <a href="#">الرئيسية</a>
-    <a href="#categories">الأقسام</a>
-    <a href="#contact">تواصل معنا</a>
-  </nav>
+<nav>
+  <a href="#home">الرئيسية</a>
+  <a href="#categories">الأقسام</a>
+  <a href="#about">عن جنى</a>
+  <a href="#contact">تواصل معنا</a>
+</nav>
 
-  <section class="hero">
-    <h1>كل شي بتحتاجه بمكان واحد ✨</h1>
-    <p>
-      قرطاسية، شنط مدرسية، أدوات مدرسية وهدايا
-      بتشكيلة حلوة تناسب الكبار والصغار.
-    </p>
+<section class="hero" id="home">
+  <h1>كل شي بتحتاجه بمكان واحد ✨</h1>
 
-    <a href="#categories" class="button">تصفّح الأقسام</a>
-  </section>
+  <p>
+    من القرطاسية والشنط المدرسية،
+    للهدايا واللانش بوكس ومستلزمات المدرسة...
+    <br>
+    <strong>جنى بتجمعلك كل اللي بتحبه بمكان واحد 💗</strong>
+  </p>
 
-  <section class="section" id="categories">
+  <a class="button" href="#categories">اكتشف الأقسام</a>
+</section>
 
-    <h2>تصفّح حسب القسم</h2>
+<section id="categories">
 
-    <div class="categories">
+  <h2 class="section-title">تصفّح أقسامنا 🛍️</h2>
 
-      <div class="category">
-        <div class="icon">🎒</div>
-        <h3>شنط مدرسية</h3>
-      </div>
+  <div class="categories">
 
-      <div class="category">
-        <div class="icon">✏️</div>
-        <h3>قرطاسية</h3>
-      </div>
-
-      <div class="category">
-        <div class="icon">🎨</div>
-        <h3>فن وإبداع</h3>
-      </div>
-
-      <div class="category">
-        <div class="icon">🎁</div>
-        <h3>هدايا</h3>
-      </div>
-
-      <div class="category">
-        <div class="icon">🍱</div>
-        <h3>لانش بوكس ومطريات</h3>
-      </div>
-
-      <div class="category">
-        <div class="icon">🏫</div>
-        <h3>مستلزمات المدرسة</h3>
-      </div>
-
+    <div class="card">
+      <div class="icon">🎒</div>
+      <h3>شنط مدرسية</h3>
     </div>
 
-  </section>
+    <div class="card">
+      <div class="icon">✏️</div>
+      <h3>قرطاسية</h3>
+    </div>
 
-  <footer id="contact">
-    <p>مكتبة <strong>جنى</strong></p>
-    <p>كل شي بتحبه... أقرب مما بتتخيل 💗</p>
-  </footer>
+    <div class="card">
+      <div class="icon">🎨</div>
+      <h3>فن وإبداع</h3>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎁</div>
+      <h3>هدايا</h3>
+    </div>
+
+    <div class="card">
+      <div class="icon">🥤</div>
+      <h3>لانش بوكس ومطريات</h3>
+    </div>
+
+    <div class="card">
+      <div class="icon">📚</div>
+      <h3>مستلزمات المدرسة</h3>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+
+  <div class="about">
+
+    <h2 class="section-title">ليش جنى؟ 💗</h2>
+
+    <p>
+      لأننا منعرف قديش التفاصيل الصغيرة بتفرق،
+      اخترنا نكون المكان اللي تلاقي فيه
+      كل احتياجاتك للمدرسة والقرطاسية والهدايا
+      بطريقة مرتبة وحلوة.
+    </p>
+
+    <p>
+      <strong>جنى... الخيار الحلو لكل يوم ✨</strong>
+    </p>
+
+  </div>
+
+</section>
+
+<section id="contact">
+
+  <h2 class="section-title">تواصل معنا 📱</h2>
+
+  <div class="about">
+    <p>للاستفسار عن المنتجات والأسعار والطلبات</p>
+
+    <a class="button" href="https://wa.me/96179492932">
+      تواصل معنا عبر واتساب 💬
+    </a>
+  </div>
+
+</section>
+
+<footer>
+  <p>© 2026 <strong>مكتبة جنى</strong></p>
+  <p>كل شي بتحتاجه... بمكان واحد ✨</p>
+</footer>
 
 </body>
 </html>
